@@ -1,0 +1,2061 @@
+/*
+Theme Name: Templastic
+Theme URI: http://bestwebsoft.com/products/templastic/
+Author: the BWS Team
+Author URI: https://github.com/bestwebsoft
+Description: Templastic is a fully responsive theme, which means it will be displayed perfectly on the screens of all sizes. This way, people can access your website using any device possible - be it a PC, a smartphone, or a tablet. Templastic is a fresh minimalistic theme with a clean and simplistic, and yet highly elegant design. It will be a killer option for a business website or WordPress blog. Live demo: http://bestwebsoft.com/wordpress_demo_theme/templastic/
+Version: 1.0
+License: GNU General Public License v3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: black, white, gray, blue, orange, left-sidebar, fluid-layout, custom-header, custom-menu, editor-style, featured-images, post-formats, sticky-post, translation-ready
+Text Domain: templastic
+*/
+
+/*
+    1. RESET.
+    2. ADD FONTS.
+    3. GLOBAL SYLES:
+        3.1 Add wrap and position styles;
+        3.2 Other styles;
+    4. SITE TITLE &  TAGLINE.
+    5. SEARCH.
+    6. MAIN NAVIGATION.
+    7. BREADCRUMBS.
+    8. SIDEBAR or widgets STYLE.
+    9. POST ELEMENTS: 
+        9.1 STYLE FOR IMAGES;
+        9.2 LIST TYPES;
+        9.3 FORM ELEMENTS:
+            9.3.1 SELECT;
+            9.3.2 RADIO;
+            9.3.3 CHECKBOX;
+            9.3.4 INPUT FILE;
+            9.3.5 INPUT BUTTON, SUBMIT & RESET; 
+            9.3.6 OTHER ELEMENTS;
+    10. TAGS.
+    11. COMMENTS.
+    12. PAGE-NAVIGATION, IMAGE-NAVIGATION, COMMENTS-NAVIGATION.
+    13. FOOTER.
+    14. For BWS Plugins. 
+    15. @MEDIA. 
+
+    Theme default colors:
+        background:     #e7eaef;
+        headers:        #2d363a;
+        text color:     #5b5c5e;
+        link:           #4f85d5;
+        link:hover:     #e25023;
+        pre background: #e7eaef;
+        pre font:       #8e9093;              
+*/
+
+/*               1. ===  RESET   ===
+----------------------------------------------------------*/
+* {
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+a img,
+fieldset {
+    border: 0;
+}
+ul {
+    list-style: none;
+}
+/*               2.  ===  ADD FONTS  ===
+-----------------------------------------------------------*/
+@font-face {
+    font-family: 'Open Sans Regular'; 
+    src: url('fonts/Open-Sans/OpenSans-Regular.eot');
+    src: url('fonts/Open-Sans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Open-Sans/OpenSans-Regular.svg#Open Sans') format('svg'),
+    url('fonts/Open-Sans/OpenSans-Regular.woff') format('woff'),
+    url('fonts/Open-Sans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans Bold'; 
+    src: url('fonts/Open-Sans/OpenSans-Bold.eot');
+    src: url('fonts/Open-Sans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Open-Sans/OpenSans-Bold.svg#Open Sans') format('svg'),
+    url('fonts/Open-Sans/OpenSans-Bold.woff') format('woff'),
+    url('fonts/Open-Sans/OpenSans-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans Italic'; 
+    src: url('fonts/Open-Sans/OpenSans-Italic.eot');
+    src: url('fonts/Open-Sans/OpenSans-Italic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Open-Sans/OpenSans-Italic.woff') format('woff'),
+    url('fonts/Open-Sans/OpenSans-Italic.ttf')  format('truetype'),
+    url('fonts/Open-Sans/OpenSans-Italic.svg#OpenSans-Italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+font-family: 'Open Sans Semibold'; 
+    src: url('fonts/Open-Sans/OpenSans-Semibold.eot');
+    src: url('fonts/Open-Sans/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Open-Sans/OpenSans-Semibold.svg#Open Sans Semibold') format('svg'),
+    url('fonts/Open-Sans/OpenSans-Semibold.woff') format('woff'),
+    url('fonts/Open-Sans/OpenSans-Semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*             3. ===  GLOBAL STYLES  ===
+-----------------------------------------------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: #e7eaef;
+    width: 100%;
+}
+#wrapper {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;        
+        overflow: auto;   
+        font: normal 13px 'Open Sans Regular';
+        word-wrap: break-word;
+}
+
+/* 3.1 Add wrap and position styles ------*/
+.wrap {
+    white-space: normal;
+    white-space: -moz-normal;
+    white-space: -o-normal;
+    word-wrap: break-word;
+}
+.entry {
+    margin: 5px;
+    color: #5b5c5e;
+}
+.entry p { 
+    margin-bottom: 10px;
+}
+.alignleft {
+    float: left;
+    margin: 5px 15px 5px 0;
+}
+.alignnone {
+    float: none;
+}
+.alignright {
+    float: right;
+    margin: 5px 0 5px 15px;
+}
+.aligncenter {
+    text-align: center;
+}
+.gallery-row {
+  width: 100% !important;
+}
+.bypostauthor {}
+.gallery-caption {}
+.sticky {}
+
+/* 3.2 Other main styles ----------------*/
+    .post-edit-link,
+    .return_link a,
+    .must-log-in a,
+    .more-link,
+    .templastic-nav-previous a,
+    .templastic-nav-next a,
+    .templastic-post header > p > a,
+    .templastic-article > p > a,
+    .templastic-tags-box a,
+    .templastic-sidebar-part a,
+    .logged-in-as > a,
+    .comment a,
+    .comments a,
+    .wp-caption-text a,
+    .page-links a,
+    cite a,
+    th a,
+    tr a,
+    dd a,
+    li a {
+        height: 16px;
+        line-height:  19px;
+        text-decoration: none;
+        color: #4f85d5;          
+        border-bottom: 1px solid #4f85d5;          
+    }
+    .templastic-sidebar-part a:hover,
+    .templastic-post a:hover,
+    .templastic-footer a:hover,
+    a:hover {
+            color: #e25023;  
+            text-decoration: none;
+            border-width: 0;
+    } 
+    p { 
+        line-height: 1.5; 
+    }
+    #templastic_nav a,
+    table,
+    select,
+    textarea,
+    input[type="search"],
+    input[type="text"],
+    input[type="password"],
+    input[type="checkbox"],
+    input[type="radio"],
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"],
+    input[type="file"],
+    .title a:hover,
+    .templastic-select,
+    .templastic-custom-file-text, 
+    .templastic-custom-file-button,
+    .templastic-radio,
+    .templastic-check {
+        cursor: pointer;
+    }
+    abbr,
+    acronym {
+        cursor: help;
+    }
+.templastic-content {
+    margin: 0 auto; 
+    padding-top: 48px;
+    max-width: 970px; 
+    min-width: 651px;
+}
+    .templastic-main {
+        float: right;
+        margin-right: 15px;
+        width: 640px;   
+    } 
+
+/*           4. ===  SITE TITLE &  TAGLINE ===
+--------------------------------------------------------------- */
+#templastic_header {    
+    width: 100%;     
+    min-width: 320px;   
+}
+.templastic-logo-block {
+    box-shadow: inset 0 -9px 15px  -15px;
+    width: 100%;
+    min-width: 320px;
+}
+    .templastic-logo { 
+        margin: 0 auto; 
+        max-width: 970px; 
+    }
+        .templastic-banner {
+            width: 60%;
+            margin-top: 24px;
+            margin-left: 15px;
+            margin-bottom: 30px;
+            text-align: left;
+            line-height: 21px;
+        }
+            .templastic-site-title {
+                margin: 0;
+                line-height: 20px;
+            }
+            .templastic-site-title a {
+                margin: 0;
+                font: bold 18px 'Open Sans Bold';
+                color: #2d363a;
+                text-decoration: none;
+                width: 100%;
+            }
+            .templastic-site-description {
+                margin: 3px 0 0 0;
+                color: #888a8d;
+                font: normal 13px 'Open Sans Regular';
+            } 
+
+/*               5.  ===  SEARCH  === 
+-----------------------------------------------------------------*/ 
+.templastic-search {
+    margin-top: 24px;
+    margin-right: 14px;
+    margin-bottom: 22px;
+    padding-top: 3px;
+    width: 290px;
+    height: 50px;
+    line-height: 21px;
+}     
+    form.searchform {
+        margin-top: 0!important;
+        width: 270px;
+        max-height: 50px; 
+    }
+    .templastic-search > form > input[type="text"],
+    .searchform  input[type="text"] {
+        box-sizing: content-box;
+        position: relative;
+        margin: 0 auto;
+        margin-left: 20px;
+        padding-left: 8px;
+        padding-right: 30px;
+        height: 36px;
+        width: 225px;   
+        color : #b9bbbf; 
+        font-size: 13px; 
+        line-height: 21px;
+        outline: none; 
+        overflow: hidden; 
+        letter-spacing: 0;
+        word-spacing: normal;
+        border: 1px #b9bbbf;
+        box-shadow: 0 0 5px;
+        background: #fff url('images/input.png') 238px 14px no-repeat!important;
+    }
+    /* .templastic-search > form > input[type="submit"],
+    .searchform input[type="submit"] {
+        display: none;
+        position: relative;
+        top:-48px;
+        left:177px;
+        background: url('images/input.png') 81px 14px no-repeat; 
+        border: 0;        
+    } */
+   /*  .templastic-post .searchform input[type="text"] {
+       margin-left: 0;
+   }
+   .templastic-post .searchform input[type="submit"] { 
+       left: 156px;
+   } */
+   /*  .templastic-search > form > input[type="submit"]:hover,
+   .searchform  input[type="submit"]:hover {
+       background: url('images/input.png') 81px 14px no-repeat; 
+   } */
+/* title for search */
+.templastic-search-result,
+.templastic-archives { 
+    margin-bottom: 30px;
+} 
+
+/*                     6. ===  MAIN NAVIGATION  ===
+------------------------------------------------------------------------*/
+.templastic-nav-block {
+    background: #fff;
+    width: 100%;     
+}
+#templastic_nav {
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 25px; 
+    max-width: 970px;
+    min-width: 320px;
+    height: auto; 
+    }
+    .templastic-toggleMenu { 
+        display: none;
+        margin-left: 5%;
+        padding: 0 5px;
+        border-radius: 0;
+        background-image: url(images/menu.png)!important;
+        background-repeat: no-repeat;
+        background-position: 6px 4px;
+        color: #888a8d;
+        font-family: 'Open Sans Regular';
+        width: 33px;
+        height: 20px;
+        border: 0;
+        box-shadow: 0 0 5px;
+    }
+    .templastic-toggleMenu:hover,
+    .templastic-toggleMenu:active {
+        box-shadow: 0 0 10px;
+    }
+        .menu {
+            display: block;
+            margin-left: 3%;
+            list-style: none;
+            font: normal 15px 'Open Sans Bold';
+        }
+        .menu .menu-item-has-children ul,
+        .menu .children { 
+            display: none; 
+            z-index: 10;
+        }
+        .menu-item-has-children.hover > ul,
+        .menu li.hover > ul {
+            position: absolute;
+            display: block;
+        }
+            .menu > li > ul::before,
+            .menu > ul > li > ul::before { 
+                position: absolute;
+                top: 43px;
+                right: 122px;
+                margin-left: -8px;
+                content: "";
+                width: 0;
+                height: 0;  
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 8px solid white;
+            }
+            .menu > ul > li,
+            .menu > li { 
+                position: relative;
+                display: inline-block;
+                padding: 5px 33px 5px 7px;
+                -webkit-transition: all 0.2s ease-out;
+                -moz-transition: all 0.2s ease-out;
+                -ms-transition: all 0.2s ease-out;
+                -o-transition: all 0.2s ease-out;
+                transition: all 0.2s ease-out;
+            }
+                .menu > li > a,
+                .menu ul > li > a {    
+                    color: #4f85d5;
+                    text-decoration: underline!important;
+                    border: 0!important;
+                }                      
+                    .menu > li.hover > a {
+                        border-width: 0;
+                        text-decoration: none;
+                        color: #e25023;  
+                    }
+                    .menu > li > ul,
+                    .menu > ul > li > ul { 
+                        position: absolute;
+                        top: 20px;
+                        left: -14px;
+                        padding-top: 51px; 
+                        width: 176px;  
+                        list-style: none;
+                        z-index: 9;
+                    }
+                        .menu .sub-menu > li,
+                        .menu ul > li {
+                            position: relative;
+                        }
+                        .menu .sub-menu > li > a,
+                        .menu .children > li > a {
+                            display: inline-block;
+                            padding: 15px 25px 15px 25px;
+                            background-color: #fff;
+                            width: 132px;
+                            height: auto;
+                        }   
+                            .menu .sub-menu > li.hover > a:hover,
+                            .menu .children > li.hover > a:hover {
+                                text-decoration: none!important;
+                                color: #fff;
+                                border: 0;
+                                background-color: #e25023;
+                            }
+.templastic-search #templastic_nav .menu li a { 
+    line-height: 20px; 
+}
+.menu a {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.menu li li > ul,
+.menu li li li li > ul,
+.menu li li li li li li > ul,
+.menu li li li li li li li li > ul,
+.menu li li li li li li li li li li > ul { 
+    position: absolute;
+    top: 10px;
+    left: 182px;
+    padding-top: 15px;
+}
+.menu li li li > ul,
+.menu li li li li li > ul,
+.menu li li li li li li li > ul,
+.menu li li li li li li li li li > ul,
+.menu li li li li li li li li li li li > ul { 
+    position: absolute;
+    top: 10px;
+    left: -182px;
+    padding-top: 15px;
+}
+.menu li li > ul li.menu-item-has-children > a,
+.menu li li > ul li.page_item_has_children > a,
+.menu li li li li > ul li.menu-item-has-children > a,
+.menu li li li li > ul li.page_item_has_children > a,
+.menu li li li li li li > ul li.menu-item-has-children > a,
+.menu li li li li li li > ul li.page_item_has_children > a,
+.menu li li li li li li li li > ul li.menu-item-has-children > a,
+.menu li li li li li li li li > ul li.page_item_has_children > a { 
+    padding: 15px 25px 15px 25px;
+    background: #fff url(images/nav2.png) 15px 21px no-repeat!important;
+    text-align: right;
+}
+.menu li li > ul li.menu-item-has-children > a:hover,
+.menu li li > ul li.page_item_has_children > a:hover,
+.menu li li li li > ul li.menu-item-has-children > a:hover,
+.menu li li li li > ul li.page_item_has_children > a:hover,
+.menu li li li li li li > ul li.menu-item-has-children > a:hover,
+.menu li li li li li li > ul li.page_item_has_children > a:hover,
+.menu li li li li li li li li > ul li.menu-item-has-children > a:hover,
+.menu li li li li li li li li > ul li.page_item_has_children > a:hover {
+    background: #e25023 url(images/nav_hover2.png) 15px 21px no-repeat!important;
+    text-align: right;
+}
+.menu li > ul li.menu-item-has-children > a,
+.menu li > ul li.page_item_has_children > a,
+.menu li li li > ul li.menu-item-has-children > a,
+.menu li li li > ul li.page_item_has_children > a,
+.menu li li li li li > ul li.menu-item-has-children > a,
+.menu li li li li li > ul li.page_item_has_children > a,
+.menu li li li li li li li > ul li.menu-item-has-children > a,
+.menu li li li li li li li > ul li.page_item_has_children > a,
+.menu li li li li li li li li li > ul li.menu-item-has-children > a,
+.menu li li li li li li li li li > ul li.page_item_has_children > a { 
+    padding: 15px 25px 15px 25px;
+    background: #fff url(images/nav.png) 159px 21px no-repeat!important;
+    text-align: left;
+}
+.menu li > ul li.menu-item-has-children > a:hover,
+.menu li > ul li.page_item_has_children > a:hover,
+.menu li li li > ul li.menu-item-has-children > a:hover,
+.menu li li li > ul li.page_item_has_children > a:hover,
+.menu li li li li li > ul li.menu-item-has-children > a:hover,
+.menu li li li li li > ul li.page_item_has_children > a:hover,
+.menu li li li li li li li > ul li.menu-item-has-children > a:hover,
+.menu li li li li li li li > ul li.page_item_has_children > a:hover,
+.menu li li li li li li li li li > ul li.menu-item-has-children > a:hover,
+.menu li li li li li li li li li > ul li.page_item_has_children > a:hover {
+    background: #e25023 url(images/nav_hover.png) 159px 21px no-repeat!important;
+    text-align: left;
+}
+
+/*               7. ===  BREADCRUMBS  ===
+--------------------------------------------------------------- */
+.templastic-title-block { 
+    width: 100%; 
+    background-color: #cfd2d7; 
+    box-shadow: inset 0 9px 15px -15px #333 ; 
+}
+.templastic-title { 
+    margin: 0 auto;
+    padding: 7px 0 9px 0;
+    max-width: 970px; 
+    min-height: 28px;
+    text-align: left;
+    color: #314644;
+}
+    .templastic-title a {
+        margin-top: 3px;
+        color: #314644;
+        font: normal 13px 'Open Sans Regular';
+        border: 0;
+    }
+    .templastic-title a:hover {
+        font-weight: bold;
+    }
+#templastic_breadcrumbs {
+    float: right;
+    margin: 5px 15px;
+    list-style: none;
+    overflow: hidden;
+    max-width: 100%;
+} 
+    #templastic_breadcrumbs ul {
+        display: inline;
+    }
+    #templastic_breadcrumbs li {
+        /* float: left; */
+        text-align: left;
+        margin-right: 5px;
+        display: inline;
+    }
+    #templastic_breadcrumbs a {
+        text-decoration: none;
+    } 
+.last a,
+li.last {
+    font-family: 'Open Sans Bold'!important;
+} 
+
+/*                  8. ===  SIDEBAR or widgets STYLE  ===
+---------------------------------------------------------------------*/
+#templastic_sidebar {
+    float: left;
+    margin-left: 15px;
+    width: 262px;
+}
+.templastic-sidebar-part {
+    margin-bottom: 30px;
+    padding:20px 20px 20px 20px;
+    color: #5b5c5e;
+    background-color: #fff; 
+    box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+    -moz-box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+    -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.2);                
+}
+    .templastic-widget-title,
+    .widgettitle {
+        margin-top: 7px;
+        margin-bottom: 23px;
+        color: #b9bbbf;
+        font: normal 15px 'Open Sans Bold';
+    }
+    .templastic-sidebar-part  ul > li {
+        margin: 10px 0;
+    }
+    #templastic_sidebar li > ul {
+        padding-left: 14px;
+    }
+    #wp-calendar caption {
+        margin-bottom: 5px;
+    }
+    #wp-calendar td,
+    #wp-calendar th {
+        padding: 10px 0 10px 0;
+    }
+    .rss-date {
+        font-size: 11px;
+    }
+    #templastic_sidebar .searchform input[type="text"] {
+        margin-left: 0;
+        min-width: 100px!important;
+        width: 184px;
+        background: #fff url('images/input.png') 196px 14px no-repeat!important;
+    }
+   /*  #templastic_sidebar .searchform input[type="submit"] {
+       left: 114px;
+   } */
+    .wp-caption a {
+        border: 0;
+    }
+    .textwidget {
+        color: #5b5c5e;
+    }  
+    .templastic-sidebar-part .menu a {
+        display: inline!important;
+        font: normal 13px 'Open Sans Regular';
+        height: 16px;
+        line-height: 19px;
+        text-decoration: none!important;
+        color: #4f85d5;
+        border-bottom: 1px solid #4f85d5!important;
+    }  
+    .templastic-sidebar-part .menu ul,
+    .templastic-sidebar-part .menu li,
+    .templastic-sidebar-part .sub-menu ul,
+    .templastic-sidebar-part .sub-menu li {
+        position: static!important;
+        display: block!important;
+        width: 100%;
+        height: auto!important;
+        padding: 0!important;
+        background: transparent;
+    }
+    .templastic-sidebar-part .sub-menu > li {
+        margin-left: 14px;
+        background-position: 9999px;
+        width: auto!important;
+    }
+    .templastic-sidebar-part .sub-menu > li > a {
+        text-align: left!important;
+    }
+    .templastic-sidebar-part .menu > li > ul:before {
+        display: none;
+    }
+    .templastic-sidebar-part .menu { 
+        margin-left: 5%;
+        margin-top: 10px;
+    }
+    .templastic-sidebar-part .sub-menu  li:hover a,
+    .templastic-sidebar-part .menu  li:hover a {
+        color: #4f85d5;
+        border-bottom: 1px solid #4f85d5;
+        cursor: pointer;
+    } 
+    .templastic-sidebar-part .sub-menu > li a:hover,
+    .templastic-sidebar-part .menu li a:hover,
+    .templastic-sidebar-part .sub-menu > .menu-item-has-children > a:hover {
+        background-color: transparent!important; 
+        background-position: 9999px 9999px;
+        color: #e25023!important;
+        text-decoration: none!important;
+    }
+    .templastic-sidebar-part .sub-menu > li > a,
+    .templastic-sidebar-part .menu > li > a,
+    .templastic-sidebar-part .sub-menu > .menu-item-has-children > a {
+        padding: 0!important;
+        width: 100%;
+        background: transparent!important;
+    }    
+    
+/*                  9. ===  POST ELEMENTS  ===
+-----------------------------------------------------------------------*/
+.templastic-post {  
+    margin-bottom: 30px;                 
+    padding: 30px 30px 22px 30px; 
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+    -moz-box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+    -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+}
+h1 {
+    margin-bottom: 3px;
+    font-size: 32px;
+    line-height: 41px;
+}
+h2 {
+    margin-bottom: 6px;
+    font-size: 27px;
+    line-height: 35px;
+}
+h3 {
+    margin-bottom: 10px;
+    margin-top: 3px;
+    font-size: 24px;
+    line-height: 30px;
+}
+h4 {
+    margin-bottom: 12px;
+    margin-top: 7px;
+    font-size: 21px;
+    line-height: 25px;
+}
+h5 {
+    margin-bottom: 14px;
+    margin-top: 9px;
+    font-size: 18px;
+    line-height: 20px;
+}
+h6 {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 17px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: block;
+    color: #2d363a;             
+    font-weight: normal;
+}
+.templastic-post h1 a,
+.templastic-post header h1,
+.item_title a { 
+    display: block;
+    max-width: 100%!important;
+    margin-top: 1px;
+    margin-bottom: 3px;   
+    color: #2d363a;
+    font-family: 'Open Sans Bold';
+    text-decoration: none;
+    border: 0;    
+}
+.templastic-article,
+.templastic-article p,
+.templastic-article > div {
+    max-width: 100%;                 
+    margin-top: 17px;
+    margin-bottom: 21px;
+    color: #5b5c5e;
+    line-height: 1.66;
+    height: auto;
+}
+.templastic-article div,
+iframe,
+embed,
+object {
+    width: auto\9;
+    max-width: 100%!important;
+}
+p.meta {        
+    margin: -1px 0 -2px 0;
+    color: #b9bbbf;
+}
+.format-aside .templastic-article {
+    background-color: #e7eaef;
+}
+.format-aside .templastic-article p,
+.format-aside .templastic-article h1 {
+    padding-left: 10px;
+}
+
+/*               9.1 ===  STYLE FOR IMAGES  ===
+-------------------------------------------------------------------*/
+.templastic-article > div {
+    margin-bottom: -1px;
+    max-width: 100%;
+    height: auto;
+}
+    .templastic-article > div > a > img {
+        margin-top: 26px;
+        margin-bottom: 1px;      
+        max-width: 100%;
+        height: auto;      
+    }
+    .templastic-article > p > a > img {      
+        height: auto;     
+    }
+    img { 
+        max-width: 100%;
+        height: auto;
+    }
+    .wp-caption-text {
+        display: block;
+        margin-top: 1px;
+        font-family: 'Open Sans Italic';
+        color: #b9bbbf;  
+    }
+a.templastic-feature-img {
+    border: 0!important;
+}
+.attachment-post-thumbnails-size {
+    margin-right: 75px;
+}
+.attachment a:hover img {
+    box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+    -moz-box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+    -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+.textwidget .wp-caption {
+    margin-bottom: 10px;
+}
+.format-aside .templastic-article > div {
+    padding-left: 10px;
+}
+
+/*                 9.2  ===  LIST TYPES  ===
+ ----------------------------------------------------------------*/
+dl {
+    padding: 9px 0 6px 0;
+}
+dt { 
+    margin: 0 0 6px 20px;                              
+    font-size: 15px;
+    color: #2d363a;
+} 
+dd {
+    margin: 6px 0 10px 20px;                            
+    color: #5b5c5e;
+}  
+ol > li {
+    margin: 10px 0 10px 30px;
+    list-style: decimal inside; 
+}
+ol > li:before {
+    content: " ";
+}
+.templastic-article > ul > li {
+    margin: 10px 0 10px 30px;
+    list-style: disc inside; 
+}
+li {
+    color: #5b5c5e;
+}
+.templastic-article ol > li > ul > li,
+.templastic-article ul > li > ul > li {
+     margin: 10px 0 10px 30px;
+    list-style: disc inside; 
+}
+
+/*                9.3  ===  FORM ELEMENTS  ===
+ ---------------------------------------------------------------*/
+form {
+    margin-top: 18px;
+    color: #5b5c5e;
+    line-height: 1.65;
+}
+    form  > p {
+        margin: 23px 0 0 0;
+    }
+    fieldset {
+        margin-top: 17px;
+    }
+    fieldset > h2 {
+        margin-bottom: 16px;
+    }
+        fieldset > p {
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: #5b5c5e; 
+            font: normal 13px 'Open Sans Regular';
+            line-height: 1.65;
+            -moz-hyphens: auto;
+            word-wrap: break-word;
+            vertical-align: baseline;
+        }
+    legend {
+        color: #5b5c5e;
+        font: normal 13px 'Open Sans Regular';
+        line-height: 1.65;    
+    }
+    input[type='text'],
+    input[type="password"] {
+        margin: 4px 10px 2px 0;
+        padding: 0 5px;
+        max-width: 560px;
+        min-width: 208px;
+        min-height: 42px;
+        outline: none;
+        color: #5b5c5e;
+        font: normal 13px 'Open Sans Regular'; 
+        border: 1px solid #ccc;
+        box-shadow: 0 0 6px #d2d4d9;   
+    }
+    input[type="password"] {
+        margin: 5px 10px 2px 0!important;
+    }
+    textarea {
+        margin: 5px 10px -3px 0;
+        padding: 0 5px;
+        outline: none; 
+        color: #5b5c5e;
+        font: normal 13px 'Open Sans Regular';
+        min-width: 208px;
+        max-width: 566px;
+        min-height: 92px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 6px #d2d4d9;
+    }
+
+/*          9.3.1  ===  SELECT  ===
+------------------------------------------------*/
+.templastic-select div {
+    clear: none;
+}
+.templastic-select {
+    position: relative;
+    padding: 5px 20px 27px 0px;
+    width: 222px; 
+    height: 20px;
+    z-index: 8;
+    color: #5b5c5e;
+}
+.templastic-active-opt {
+    float: left;
+    padding: 3px 0 11px 0;
+    width: 218px;
+    height: 28px;
+    background: #f4f5f7;
+    border: 1px solid #d2d4d9;
+    box-shadow: 0 0 6px #d2d4d9;
+}
+.templastic-active-opt > div:first-child {
+    float:left;
+    padding: 8px 0 11px 10px;
+    overflow: hidden;
+    width: 160px;
+    max-height: 11px;
+}
+.templastic-select-button {
+    float: right;   
+    width: 37px;
+    height: 37px;
+    background: url(images/select.png) 21px 11px no-repeat;
+}
+.templastic-options {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    display: none;
+    width: 218px;
+    background-color: #fff;
+    border: 1px solid #ddd;   
+}
+.templastic-options.templastic-optgroup:first-child {
+    padding: 10px 5px 5px 10px;
+}
+.templastic-optgroup {
+    padding:5px 5px 5px 10px;
+    color: #aaa;
+}
+.templastic-option,
+.templastic-option:last-child {
+    padding: 12px 5px 12px 12px;
+    cursor: pointer;
+    color: #555;
+}
+.templastic-option:hover,
+.templastic-option-selected {
+    color: #555;
+    background-color: #f4f5f7;
+}
+
+/*            9.3.2  ===  RADIO  ===
+--------------------------------------------------*/
+ input[type="radio"] {
+    position: absolute;
+    display: none;
+    margin: 5px;
+    font: normal 13px 'Open Sans Regular';
+    color: #5b5c5e;
+}
+.templastic-radio {
+    position: relative;
+    top: 11px;
+    display: inline-block;
+    margin: 3px 5px 7px -1px;
+    padding: 0 0 3px;
+    width: 18px;
+    height: 18px;    
+    background: url(images/radio_sprite.png) no-repeat;
+    background-position: -4px 0;
+}
+.templastic-radio.templastic-active {
+    background-position: -4px -48px;
+}
+.templastic-radio.templastic-hover {
+   background-position: -4px -24px;
+}
+/*             9.3.3  ===  CHECKBOX  ===
+-------------------------------------------------------*/
+.templastic-check input[type="checkbox"] {
+    position: absolute;
+    display: none;
+}
+.templastic-check {
+    position: relative;
+    top: 6px;
+    display: inline-block;
+    margin: 9px 4px 0 -5px;
+    padding: 2px;
+    width: 19px;
+    height: 18px;
+    background: url(images/check_sprite.png) 0 -2px no-repeat;  
+}
+.templastic-check.templastic-active {
+    background-position: 0px -47px;
+}
+.templastic-check.templastic-hover {
+    background-position: 0px -24px;
+}
+
+/*              9.3.4  ===  INPUT FILE  ===
+----------------------------------------------------------*/
+.templastic-custom-file input[type="file"] {
+    opacity: 0;
+    clear: both;
+}
+.templastic-custom-file {
+    margin: 5px 0px 4px 0px;
+    padding: 9px 9px 8px 9px;
+    max-width: 100%;
+    outline: none;    
+    border: 1px solid #d2d4d9;    
+}
+.templastic-custom-file-text {
+        margin-right: -5px;
+        padding: 11px 0 3px 10px;
+        float: left;      
+        width: 208px;
+        height: 28px;
+        background: #f4f5f7; 
+        border: 1px solid #ccc;
+        box-shadow: 0 0 6px #d2d4d9;
+    }
+.templastic-custom-file-button {
+        position: relative;
+        left: -10px;
+        top: 3px;
+        float: left;
+        width: 15px;
+        height: 37px;
+        background: url('images/file.png') 0 no-repeat;
+    }
+.templastic-custom-file-status {
+        float: left;
+        margin: 11px 0 5px 0;
+        width: 190px;
+        height: 13px;
+    }
+
+/*          9.3.5 ===  INPUT BUTTON, SUBMIT & RESET  ===
+---------------------------------------------------------*/
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    margin: 5px 10px 10px 0;
+    padding: 0 20px 3px 20px;
+    border: 0 solid #d2d4d9;
+    background-color: #5b5c5e;
+    color: #fff; 
+    font: normal 15px 'Open Sans Bold';
+    line-height: 1.5;
+    min-width: 100px;
+    min-height: 44px;
+    text-transform:capitalize ; 
+    text-align: center;
+}
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #4f85d5;
+}
+
+/*            9.3.6  ===  OTHER ELEMENTS  ===
+-----------------------------------------------------------*/
+table {
+    margin: 21px 0 24px 0;
+    width: 100%;
+    text-align: left;
+    color: #c4c9cc;
+    border-spacing: 0;
+    border-width: 1px;
+    box-shadow: 0 0 5px;
+    border-collapse: collapse; 
+    font-size: 13px; 
+}
+th {
+    padding: 14px 0 17px 0;
+    background-color: #f4f5f7;
+    border: 1px solid #c4c9cc;   
+    text-align: center;
+    color: #5b5c5e;
+    text-transform: uppercase; 
+    font-weight: normal;
+    letter-spacing: 0px; 
+    }
+td {
+    padding: 15px 0 16px 0;
+    border: 1px solid #c4c9cc; 
+    text-align: center;
+    color: #5b5c5e;
+    }
+pre {   
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px!important; 
+    border: 0 solid  #e0e0e0;
+    color: #8e9093;
+    word-spacing: 3px;
+    letter-spacing: 0.3px;
+    margin: 36px 1px 10px 1px;
+    padding: 22px 29px 23px 29px;
+    line-height: 165%;
+    background-color: #e7eaef;
+    box-shadow: 0 0 4px;
+    white-space: pre-wrap;
+}
+abbr, 
+acronym { 
+    display: inline-block; 
+    border-bottom: 1px solid #5b5c5e;
+    height: 16px;
+}
+address {
+    color: #5b5c5e;
+} 
+blockquote span {
+    display: block;
+    margin-top: 3px;
+    padding: 0 0 3px 1px; 
+    font: 400 13px 'Open Sans Bold';
+    color: #2d363a;
+    line-height: 130%;
+    letter-spacing: -0.1px;
+}
+blockquote  {
+    margin: 25px 0 10px 20px;
+    color: #5b5c5e;
+    font-size: 15.3px;
+    word-spacing: 0;
+    font-family: 'Open Sans Italic';
+    letter-spacing: -0.13px;
+}
+q { 
+    font-family: 'Open Sans Italic';
+    word-spacing: 0;
+    color: #5b5c5e;
+    font-size: 15.3px;
+  }
+cite {
+    display: inline-block;
+    font-family: 'Open Sans Italic';
+    font-size: 13px;
+}
+code {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 13px;
+    vertical-align: baseline;
+  }
+sup, 
+sub {
+    position: relative;
+    letter-spacing: 0.3px;
+    font-size: 0.89em;
+    color: #5b5c5e;
+    vertical-align: baseline;
+}
+sup { top: -0.6em; }
+sub { bottom: -0.6em; }
+ins {
+    background: #e7eaef;
+    text-decoration: none;
+}
+
+/*                10.  ===  TAGS  ===
+------ --------------------------------------------------*/
+.templastic-post hr {   
+    margin: 24px 0 22px 0;          
+    background-color: transparent;
+    border-bottom: 1px dashed #b9bbbf;
+    border-width: 0 0 1px;                   
+    overflow: hidden;
+}
+ /* Style for constant line between text and tags*/
+.hr {                
+    border-bottom: 1px solid #b9bbbf;
+    margin: 24px 0 19px 0!important;
+    clear: both;
+}
+.templastic-post-footer {
+    margin: 13px 5px 1px 1px!important;
+}
+.templastic-tags-box {
+    float: left;
+    width: 63%;
+}
+.comment {
+    float: right;
+    text-align: right;
+}
+
+/*                 11. ===  COMMENTS  ===
+------------------------------------------------------------*/
+#comments {     
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px; 
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);       
+} 
+#respond {  
+    margin-bottom: 30px;                 
+    padding: 30px 30px 22px 30px; 
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+    -moz-box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+    -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+}
+#respond p {
+    color: #5b5c5e;
+}
+.comments-title {
+    margin-bottom: 15px;
+}
+li.comment,
+li.pingback {
+    float: none!important;
+    margin: 0px 20px 10px 0px;  
+    text-align: left;
+    list-style-type: none;
+}
+.comment-body {
+    display: block;
+}
+.fn,
+.says { 
+    position: relative;  
+    top: -26px;
+    left: 20px;
+}
+.comment-meta,
+.comment-awaiting-moderation {
+    position: relative;
+    top:-26px;
+    left: 67px;
+}
+.comment p,
+.comment blockquote,
+.comment address {
+    position: relative;
+    top: -10px;  
+    word-wrap:break-word; 
+}
+.comment h1,
+.comment h2,
+.comment h3,
+.comment h4,
+.comment h5,
+.comment h6 {
+    margin: 15px 0 15px 0;
+} 
+.comment p,
+.comment pre {
+    margin: 12px 0 12px 0;
+} 
+.comment ul li {
+    padding-left: 25px;
+    list-style: inside disc;
+    line-height: 1.5; 
+}
+.comment ol li {
+    padding-left: 25px;
+    line-height: 1.5;
+    margin: 0;
+}
+.templastic-no-comments {
+    color: #5b5c5e;
+    font-size: 16px;
+    font-family: 'Open Sans Semibold';
+}
+ol.children {
+    margin-left: 10px;
+}
+.reply {
+    position: relative;
+    top: -10px;
+}
+span.tags-coma {
+    color: #4f85d5;
+}
+textarea#comment {
+    width: 100%;
+} 
+.commentmetadata {
+    font-size: 13px;
+}
+
+/*               12. ===  PAGE-NAVIGATION, IMAGE-NAVIGATION, COMMENTS-NAVIGATION.  ===
+------------------------------------------------------------*/
+.templastic-nav-next a,
+.templastic-nav-previous a,
+.templastic-page-navigation span,
+.templastic-page-navigation a {
+    text-decoration: none;
+    color: #4f85d5;
+    font-size: 15px; 
+}
+.templastic-page-navigation {
+    float: left; 
+    text-align: left;
+    margin-bottom: 20px;
+}
+.templastic-page-navigation a:hover { 
+    color: #e25023; 
+    text-decoration: none;
+} 
+.current {
+    border-bottom: 1px solid #4f85d5;
+}
+.templastic-nav-next a,
+.templastic-nav-previous a { 
+    height: 18px;
+    border-bottom: 1px solid #4f85d5;
+}
+.templastic-nav-next,
+.templastic-nav-previous {
+    max-width: 46%;
+    padding: 0 5px 0 5px;
+    margin: 30px 0 30px 0;
+}
+.templastic-nav-next {
+    text-align: right;
+    float: right;
+}
+.templastic-nav-next a:hover,
+.templastic-nav-previous a:hover { 
+    color: #e25023; 
+    text-decoration: none; 
+    border-width: 0; 
+}
+.templastic-nav-previous {
+    float: left;
+}
+#templastic-image-navigation {
+    margin:10px 0 10px 0;
+}
+
+/*                  13.  ===  FOOTER  ===
+------------------------------------------------------------*/
+.templastic-footer,
+.templastic-footer a { 
+    margin-top: 51px; 
+    padding-top: 27px;
+    width: 100%; 
+    height: 60px;
+    text-align: center;
+    color: #babdc1;
+    background-color: #fff; 
+    font-family: 'Open Sans Regular';
+    text-decoration: none;
+    font-size: 13px;
+}
+.templastic-slider-head a {
+    text-decoration: none;
+    border: 0;
+}
+.clear {
+    clear: both;
+    margin: 0!important;
+}
+/* ------------------------- 14. === for BWS Plugins ===--------------------------- */
+.single-gallery .gallery_box_single,
+.single-portfolio .site-content,
+.tax-portfolio_technologies .site-content,
+.page-template-gallery-template-php .gallery_box,
+.page-template-portfolio-php #content {  
+    margin-bottom: 30px;                 
+    padding: 30px 30px 22px 30px; 
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+    -moz-box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+    -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+}
+.home_page_title,
+.portfolio_short_content .item_title a  {
+    display: block;
+    margin-top: 1px;
+    margin-bottom: 3px;   
+    color: #2d363a;
+    font-family: 'Open Sans Bold';
+    text-decoration: none;
+    border: 0; 
+}
+.portfolio_short_content {
+    max-width: 100%!important;
+    padding-left: 10px;
+    margin-left: 5px!important;
+}
+.portfolio_short_content a,
+.portfolio_terms a {
+    height: 16px;
+        line-height:  19px;
+        text-decoration: underline;
+        color: #4f85d5;          
+}
+.portfolio_short_content a:hover,
+.portfolio_terms a:hover {
+    color: #e25023;  
+    text-decoration: none;
+}
+.portfolio_terms a {
+    text-align: justify;
+    padding-left: 5px;
+}
+.portfolio_thumb {
+    float: left;
+    max-width: 100%;
+}
+.portfolio_terms {
+    padding-bottom: 20px;
+    padding-left: 5px;
+}
+.portfolio_short_content a img,
+.portfolio_images_rows {
+    padding-top: 10px;
+}
+.portfolio_thumb img, 
+.portfolio_images_gallery img {
+    max-width: 100%;
+    height: auto;
+}
+.portfolio_content .read_more {
+    top: -36px;
+}
+.lightbox {
+    text-decoration: none;
+}
+.single-gallery .content-area,
+.single-portfolio .content-area,
+.tax-portfolio_technologies .content-area,
+.page-template-gallery-template-php .content-area,
+.page-template-portfolio-php .content-area {
+        float: right;
+        margin-right: 15px;
+        width: 640px;   
+    }
+.gallery .gllr_image_block {
+    margin: 5px;
+}
+.jbbrd_frontend_table_sendmail .jbbrd_frontend_field {
+    padding: 5px 5px 5px 10px!important;
+}
+#jbbrd_frontend_input_salary_to {
+ margin-left: 0px!important;
+ margin-top: 10px!important; 
+}
+.jbbrd_vacancy a {
+    height: 16px;
+    line-height:  19px;
+    text-decoration: none;
+    color: #4f85d5;          
+    border-bottom: 1px solid #4f85d5;          
+}
+.gc-bubbleDefault {
+    box-shadow: 0 0 0!important;
+}
+.gc-bubbleDefault table {
+    color: white;
+}
+.pls-contentWrap {
+    top: -2px;
+}
+.quotes_box,
+.tips_box {
+    word-wrap: break-word;
+}
+.tips_box p,
+.tips_box h3 {
+    padding-left: 10px;
+}
+.pdfprnt-bottom-right,
+.pdfprnt-bottom-left,
+.pdfprnt-top-right,
+.pdfprnt-top-left,
+.dnt_donate_button,
+.fcbk_share,
+.gglmps_container_map,
+.gglplsn_share,
+.twttr_button,
+.twttr_follow {
+    position: relative;
+    display: inline-block!important;
+    margin: 5px!important;   
+}
+.pdfprnt-bottom-right a img,
+.pdfprnt-bottom-left a img,
+.pdfprnt-top-right a img,
+.pdfprnt-top-left a img {
+    margin: 0!important;
+}
+.pdfprnt-bottom-right,
+.pdfprnt-top-right {
+    float: right;
+    width: 100%;
+}
+.pdfprnt-bottom-left,
+.pdfprnt-top-left {
+    float: left;
+    width: 100%;
+}
+.pdfprnt-top-right,
+.pdfprnt-top-left {
+    top: -5px;
+}
+.pdfprnt-bottom-right,
+.pdfprnt-bottom-left {
+    top: -5px;
+}
+.gglplsn_share {
+    top: -4px;
+}
+.twttr_follow a {
+    border-width: 0;
+}
+.twttr_button {
+    top: -4px;
+}
+.twttr_button a img {
+    margin-top: 0!important;
+}
+.fcbk_share {
+    height: 18px!important;
+}
+.cptch_block {
+    margin: 0!important;
+}
+#cptch_input,
+#templastic_sidebar input[name="cptch_number"] {
+    min-width: 28px!important;
+    width: 28px!important;
+    min-height: 26px!important;
+    margin-left: 5px;
+}
+
+.mltlngg-lang-switch {
+    padding: 3px 0 11px 6px;
+    height: 28px;
+    background: #f4f5f7;
+    border: 1px solid #d2d4d9;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+    -moz-box-shadow: 0 0 6px rgba(0,0,0,0.2); 
+    -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+#recaptcha_widget_div {
+    margin-top: 10px;
+}
+#recaptcha_table #recaptcha_response_field {
+min-width: 10px!important;
+width: 144px!important;
+min-height: 29px;
+padding-left: 5px!important;
+padding-right: 5px!important;
+}
+#templastic_sidebar .templastic-custom-file-text {
+    min-width: 180px!important;
+    width: 180px!important;
+}
+#cntctfrm_contact_form input.text, 
+#cntctfrm_contact_form textarea, 
+#cntctfrm_contact_message, 
+#cntctfrm_contact_name, 
+#cntctfrm_contact_email, 
+#cntctfrm_contact_subject {
+    max-width: 100% !important
+}
+
+/*---------------------------------------------------------------------------------
+                             15. ===  @MEDIA  ===
+---------------------------------------------------------------------------------*/
+@media screen and (max-width: 980px) {
+    #wrapper { 
+        overflow-x: auto; 
+    }
+    html,
+    body,
+    #wrapper,
+    #templastic_header,
+    .templastic-logo-block,
+    .templastic-logo,
+    .templastic-nav-block,
+    #templastic_nav,
+    .templastic-title-block,
+    .templastic-title,
+    .templastic-content {
+        width: 100%!important;
+        min-width: 320px;
+    }
+    .templastic-content {
+        padding-top: 2%;
+    }
+    .flexslider {
+        max-width: 100%;
+        height: auto!important;
+        margin-bottom: 2%!important;
+        /* ie8  
+        width: auto\9; */
+    }
+    .flexslider .slides img {
+        max-width: 100%;
+        min-width: 320px;
+        height: auto;
+    }
+    .templastic-main,
+    .content-area {
+        width: 65%!important;
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+    #templastic_sidebar {
+        width: 29%!important;
+        min-width: 180px!important;
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+    .templastic-sidebar-part {
+        margin-bottom: 6%;
+    }
+    #templastic_breadcrumbs {
+        padding-right: 10px;
+    }
+    .templastic-post {
+        margin-bottom: 2%;
+    }
+    .flex-control-nav li a {
+        width: 14px!important;
+        height: 14px!important;
+    }
+    .templastic-article > p > a > img {
+        max-width: 526px;
+    }
+}
+
+/*-------------------------   === 900 == ----------- -------------------*/
+@media screen and (max-width: 900px) {
+    .templastic-main { 
+        width: 64%!important;
+    }
+    .templastic-banner {
+        width: 50%;
+    }
+    .templastic-page-navigation { 
+        top: 15px!important;
+    }
+    .templastic-article > p > a > img {
+        max-width: 454px;
+    }
+    #templastic_sidebar {
+        width: 32%!important;
+    }
+    #templastic_sidebar .templastic-active-opt,
+    #templastic_sidebar .templastic-select,
+    #templastic_sidebar .templastic-options {
+        width: 204px;
+    }
+    #templastic_sidebar .templastic-select-button {
+        float: none;
+        margin-left: 164px;
+    }
+    #templastic_sidebar .searchform input[type="text"] {
+        min-width: 150px;
+        width: 190px;
+        background: #fff url('images/input.png') 202px 14px no-repeat!important;
+    }
+    /* #templastic_sidebar .searchform input[type="submit"] {
+    left: 118px;
+    } */
+    li.comment, li.pingback {
+        margin: 0!important;
+        padding-left: 5px!important;
+    }
+    .comment-meta {
+        width: 120px;
+    }
+ }
+
+/*-------------------------   === 800 == ------------------------------*/
+@media screen and (max-width: 800px) { 
+    .templastic-main,
+    .content-area {
+        width: 63%!important;
+    }
+    .slider-text {
+        bottom: 101px!important;
+    }
+    .flex-control-nav li a { 
+        width: 13px!important; height: 13px!important;
+    }
+    .templastic-article > p > a > img {
+        max-width: 428px;
+    }
+    #templastic_sidebar {
+        width: 33%!important;
+    }
+    .menu ul,
+    .menu li,
+    .sub-menu ul,
+    .sub-menu li { 
+        position: static!important;
+        display: block!important;
+        width: 100%;
+        height: auto!important;
+        padding: 0!important;      
+    }
+    .sub-menu li {
+        margin-left: 15px;
+    }
+    .menu > li > ul:before {
+        display: none;
+    }
+    .menu { 
+        margin-left: 5%;
+        margin-top: 10px;
+    }
+    .sub-menu > li > a,
+    .menu > li > a,
+    .sub-menu .menu-item-has-children a,
+    .menu .menu-item-has-children a {
+        padding: 0 5px 5px 0!important;
+        width: 100%;
+        background: transparent!important;
+    } 
+    .sub-menu li > a:hover {
+        border-width: 0;
+        color: #e25023;
+        text-decoration: none;
+    }
+    .sub-menu > li > a:hover,
+    .menu > li > a:hover,
+    .sub-menu .menu-item-has-children a:hover,
+    .menu .menu-item-has-children a:hover {
+        background: transparent!important;
+        color: #e25023;
+        text-decoration: none!important;
+    }
+    #templastic_header .menu li.menu-item-has-children > a {
+        background: url("images/nav2.png") no-repeat scroll 9999px 9999px #fff !important;
+        padding: 15px 25px;
+        text-align: left;
+    }
+    #templastic_header .menu li.menu-item-has-children > a:hover {
+        background: url("images/nav2.png") no-repeat scroll 9999px 9999px #fff !important;  
+    }
+    #templastic_sidebar .templastic-active-opt,
+    #templastic_sidebar .templastic-select,
+    #templastic_sidebar .templastic-options {
+        width: 188px;
+    }
+    #templastic_sidebar .templastic-select-button {
+        margin-left: 148px;
+    }
+
+    #templastic_sidebar .searchform input[type="text"] {
+        width: 176px;
+        background: #fff url('images/input.png') 190px 14px no-repeat!important;
+    }
+  
+}
+
+/*-------------------------   === 768 == ------------------------------*/
+@media screen and (max-width: 768px) { 
+    .templastic-main,
+    .content-area { 
+        width: 61%!important;
+    }
+    #templastic_sidebar {
+        width: 35%!important;
+    }
+    .templastic-banner {
+        width: 40%;
+    }
+    .slider-text {
+        bottom: 91px!important;
+    } 
+    .templastic-article > p > a > img {
+        max-width: 326px;
+    }
+    .templastic-sidebar-part .sub-menu li {
+    margin-left: 10px!important;
+    }
+    .templastic-page-navigation {
+    margin-bottom: 42px;
+    }
+}
+
+/*-------------------------   === 700 == ------------------------------*/
+@media screen and (max-width: 700px) { 
+    .templastic-main,
+    .content-area { 
+        width: 58%!important;
+    }
+    #templastic_sidebar {
+        width: 38%!important;
+    }   
+    .templastic-post .searchform input[type="text"] {
+    width: 224px;
+    background: #fff url('images/input.png') 236px 14px no-repeat!important;
+    margin-left: 0;
+    }
+
+}
+
+/*-------------------------   === 680 == ------------------------------*/
+@media screen and (max-width: 680px) { 
+    .slider-text {
+        bottom: 80px!important;
+    }
+}
+
+/*-------------------------   === 650 == ------------------------------*/
+@media screen and (max-width: 650px) {
+    .templastic-main,
+    .content-area { 
+        float: right; 
+        margin: 0 8px; 
+    }
+    .templastic-main,
+    .content-area,
+     #templastic_sidebar { 
+        width: 92%!important;
+        margin-left: 4%!important;
+        margin-right: 4%!important;
+    } 
+    .slider-text {
+        bottom: 111px!important; 
+        opacity: 0.5!important; 
+        height: auto!important;
+    }
+    .templastic-slider-content {
+        display: none;
+    } 
+    .templastic-article > p > a > img {
+        max-width: 316px;
+    }
+    #templastic_sidebar .templastic-active-opt,
+    #templastic_sidebar .templastic-select,
+    #templastic_sidebar .templastic-options {
+        width: 182px;
+    }
+    #templastic_sidebar .templastic-select-button {
+        margin-left: 142px;
+    }
+
+    #templastic_sidebar .searchform input[type="text"] {
+        width: 225px!important;
+        background: #fff url('images/input.png') 236px 14px no-repeat!important;
+        margin-left: 8px;
+    }
+
+}
+
+/*-------------------------   === 640 == ------------------------------*/
+@media screen and (max-width: 640px) {
+    .templastic-article > p > a > img {
+        max-width: 286px;
+    }
+    .page-numbers {
+        font-size: 17px!important;
+    }
+    .comment,
+    .templastic-tags-box {
+        float: left!important;
+        text-align: left!important;
+        width: 95%!important;
+        font-size: 14px!important;
+    }
+    .single .comment {
+        float: none!important;
+    }
+}
+
+/*-------------------------   === 600 == ------------------------------*/
+@media screen and (max-width: 600px) { 
+    .templastic-article > p > a > img {
+        max-width: 238px;
+    }
+    #comment {
+        width: 96%;
+        max-width: 96%;
+    }
+    .templastic-logo div {
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+    .templastic-banner {
+        width: 94%;
+        margin-right: 15px;
+    }
+    .templastic-search {
+        float: left!important;
+        margin-top: 0!important;
+    } 
+    .searchform > input[type="text"] {
+        margin-left: 0!important;
+        background: #fff url('images/input.png') 236px 14px no-repeat!important;
+    }
+ 
+}
+
+/*-------------------------   === 550 == ------------------------------*/
+@media screen and (max-width: 550px) {
+    .slider-text {
+        bottom: 84px!important;
+        height: auto!important;
+    }
+    .flex-control-nav {
+        bottom: 4px!important;
+    } 
+    .flex-control-nav li a {
+        width: 20px!important;
+        height: 20px!important;
+    }
+    .templastic-sidebar-part {
+        margin-bottom: 8px!important;
+    }
+    .templastic-article > p > a > img {
+        max-width: 412px;
+    }
+    #templastic_sidebar .templastic-active-opt,
+    #templastic_sidebar .templastic-select,
+    #templastic_sidebar .templastic-options {
+    width: 255px;
+    }
+    #templastic_sidebar .templastic-select-button {
+    margin-left: 218px;
+    }
+    .searchform > input[type="text"] {
+        width: 228px!important;
+        background: #fff url('images/input.png') 236px 14px no-repeat!important;
+    }
+}
+
+/*-------------------------   === 485 == !!!---------------------------*/
+@media screen and (max-width: 485px) { 
+    html {
+        -webkit-text-size-adjust: none;
+    } 
+    .templastic-logo div {
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+    .templastic-banner {
+        width: 94%;
+        margin-right: 15px;
+    }
+    .templastic-search {
+        float: left!important;
+        margin-top: 0!important;
+    } 
+    .searchform > input[type="text"] {
+        margin-left: 0!important;
+        background: #fff url('images/input.png') 236px 14px no-repeat!important;
+    }
+
+    .menu > li {
+        padding-right: 40px;
+        padding-left: 0;
+    }
+    .sub-menu {
+        left: -34px!important;
+    }
+    .sub-menu > li > ul {
+        left: -5px!important;
+    }
+    #templastic_breadcrumbs {
+        float: left!important;
+    } 
+    .templastic-article > p > a > img {
+        max-width: 324px;
+    }
+    .search_resalt, .archives {
+    margin-bottom: 5px;
+    }
+    .templastic-post .searchform {
+        height: 55px;
+    } 
+    .templastic-page-navigation {
+        position: relative; 
+        top: -15px;
+        left: 15px;
+    }
+}
+
+/*-------------------------   === 400 == !!!---------------------------*/
+@media screen and (max-width: 410px) { 
+    .slider-text {
+        bottom: 89px!important;
+        padding: 0 10px!important;
+    }
+    .templastic-slider-more {
+        display: none!important;
+    }
+    .templastic-article > p > a > img {
+        max-width: 276px;
+    }
+    .templastic-nav-next a,
+    .templastic-nav-previous a, 
+    .templastic-page-navigation span, 
+    .templastic-page-navigation a {
+        margin: 0 4px;
+    }
+}
+
+/*-------------------------   === 360 == ------------------------------*/
+@media screen and (max-width: 360px) { 
+    .templastic-main,
+    .content-area,
+     #templastic_sidebar { 
+        width: 96%!important;
+        margin-left: 2%!important;
+        margin-right: 2%!important;
+    } 
+    .slider-text {
+    bottom: 75px!important;
+    }    
+    .templastic-sidebar-part .sub-menu li,
+    .sub-menu li {
+        margin-left: 20px!important;
+    }
+    input[type="text"], input[type="password"] {
+        width: 96%!important;
+    }
+}
+
+ 

@@ -1,0 +1,302 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: templastic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-13 11:17+0300\n"
+"PO-Revision-Date: 2015-01-13 14:24+0300\n"
+"Last-Translator: BestWebSoft <info@bestwebsoft.com>\n"
+"Language-Team: bestwebsoft.com <wp_theme@bestwebsoft.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../content.php:14 ../content.php:25 ../image.php:18 ../archive.php:42
+msgid "Posted on"
+msgstr "Опубликовано"
+
+#: ../content.php:15 ../content.php:28 ../image.php:19 ../archive.php:44
+msgid "of"
+msgstr "  "
+
+#: ../content.php:16 ../content.php:30 ../archive.php:46
+msgid "by"
+msgstr " "
+
+#: ../content.php:18 ../content.php:32 ../image.php:24 ../archive.php:46
+msgid "in"
+msgstr "в"
+
+#: ../content.php:50
+msgid "Pages"
+msgstr "Страницы"
+
+#: ../content.php:56 ../image.php:87 ../archive.php:63
+msgid "[Top]"
+msgstr "[ Вверх ]"
+
+#: ../content.php:57 ../image.php:88 ../archive.php:64
+msgid "Edit"
+msgstr "Pедактировать"
+
+#: ../content.php:65 ../image.php:96 ../archive.php:72
+msgid "Leave a comment"
+msgstr "Оставить комментарий"
+
+#: ../image.php:20
+msgid "at"
+msgstr "на"
+
+#: ../image.php:21
+msgid "Link to full-size image"
+msgstr "Ссылка на полноразмерное изображения"
+
+#: ../image.php:25
+msgid "Return to"
+msgstr "Вернуться к"
+
+#: ../image.php:79
+msgid "Previous"
+msgstr "Предыдущий"
+
+#: ../image.php:80
+msgid "Next"
+msgstr "Cледующий"
+
+#: ../functions.php:97
+msgid "Header Menu"
+msgstr "Меню в хедере"
+
+#: ../functions.php:107
+msgid "Home"
+msgstr "Домашняя страница"
+
+#: ../functions.php:121 ../functions.php:287
+msgid "Page"
+msgstr "Страница "
+
+#: ../functions.php:167
+msgid "Author Archive"
+msgstr "Архив Автора"
+
+#: ../functions.php:170
+msgid "Blog Archives"
+msgstr "Архив Блога"
+
+#: ../functions.php:176
+msgid "Page not found "
+msgstr "Страница не найдена"
+
+#: ../functions.php:190
+msgid "Left sidebar"
+msgstr "Левый Сайдбар "
+
+#: ../functions.php:216
+msgid "Continue"
+msgstr "Продолжить"
+
+#: ../functions.php:220
+msgid "Add to slider"
+msgstr "Добавить в слайдер"
+
+#: ../functions.php:243
+msgid "To add this post into the slider, mark it"
+msgstr "Чтобы добавить эту запись  в слайдер, отметьте ее галочкой"
+
+#: ../functions.php:264
+msgid "Choose file..."
+msgstr "Выберите файл ..."
+
+#: ../functions.php:265
+msgid "File is not selected."
+msgstr "Файл не выбран."
+
+#: ../404.php:13
+msgid ""
+"The page you are looking for might have been removed, had its name changed, "
+"or is temporarily unavailable."
+msgstr ""
+"Страница, которую вы ищете, была удалена, переименована, или же временно "
+"недоступна."
+
+# Please try using our search box below to look for the information on the Internet.
+#: ../404.php:14
+msgid ""
+"Please try using our search box below to look for the information on the "
+"Internet."
+msgstr ""
+"Пожалуйста, воспользуйтесь нашим окном поиска внизу, чтобы искать информацию "
+"в Интернете."
+
+#: ../search.php:11 ../search.php:22
+msgid "Search Results for"
+msgstr "Результаты поиска для"
+
+#: ../search.php:23
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: ../search.php:24 ../index.php:34
+msgid "The page you are looking for is not found. Maybe try a search?"
+msgstr ""
+"Запрашиваемая страница не найдена. Попробуйте воспользоваться поиском. "
+
+#: ../footer.php:11
+msgid "Created by"
+msgstr "Создано"
+
+#: ../footer.php:13
+msgid "and"
+msgstr "и"
+
+#: ../index.php:23
+msgid "No posts to display"
+msgstr "Нет сообщений для отображения"
+
+#: ../index.php:24
+msgid "Ready to publish your first post? "
+msgstr "Готовы опубликовать свой первый пост?  "
+
+#: ../index.php:24
+msgid "Get started here "
+msgstr "Начните здесь"
+
+#: ../index.php:31
+msgid "No posts found"
+msgstr "Сообщений не найдено"
+
+#: ../index.php:32
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Это несколько неудобно, не правда ли?"
+
+#: ../comments.php:21
+msgid "One comment on"
+msgstr "Один комментарий к"
+
+#: ../comments.php:21
+msgid "comments on"
+msgstr "Комментарии к"
+
+#: ../comments.php:33
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+# Previous comments
+#: ../comments.php:34
+msgid "&larr; Previous comments"
+msgstr "&larr; Предыдущие комментарии"
+
+# Next Comments
+#: ../comments.php:35
+msgid "Next Comments &rarr;"
+msgstr "Следующие комментарии &rarr;"
+
+#: ../comments.php:40
+msgid "Comments are closed."
+msgstr "Комментирование закрыто."
+
+#: ../archive.php:14
+msgid "Daily Archives"
+msgstr "Архив по дням"
+
+#: ../archive.php:17
+msgid "Monthly Archives"
+msgstr "Архив по месяцам"
+
+#: ../archive.php:17
+msgid "F Y"
+msgid_plural "monthly archives date format"
+msgstr[0] "М Г"
+msgstr[1] "М Г"
+
+#: ../archive.php:20
+msgid "Yearly Archives"
+msgstr "Архив за год"
+
+#: ../archive.php:20
+msgid "Y"
+msgid_plural "yearly archives date format"
+msgstr[0] "Г"
+msgstr[1] "Г"
+
+#: ../archive.php:23
+msgid "Archives of"
+msgstr "Архивы по"
+
+#: ../archive.php:26
+msgid "Archives by tag"
+msgstr "Архивы по тегу"
+
+#: ../archive.php:29
+msgid "Archives by category"
+msgstr "Архивы по категории"
+
+#: ../archive.php:32
+msgid "Archives"
+msgstr "Архивы"
+
+#: ../searchform.php:8
+msgid "Enter search keyword"
+msgstr "Введите слово для поиска"
+
+#: ../flex-slider.php:34
+msgid "Learn More"
+msgstr "Подробнее"
+
+# The page you are looking for is not found. Maybe try a search?
+#, fuzzy
+#~ msgid ""
+#~ "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+#~ "searching can help."
+#~ msgstr ""
+#~ "Запрашиваемая страница не найдена. Попробуйте воспользоваться поиском. "
+
+# No posts found
+#, fuzzy
+#~ msgid "Not found any Posts"
+#~ msgstr "Сообщений не найдено"
+
+#~ msgid "Page "
+#~ msgstr "Страница"
+
+#~ msgid "Download high resolution image"
+#~ msgstr "Скачать высокое разрешение изображения"
+
+#~ msgid "Sorry, nothing found."
+#~ msgstr "К сожалению, ничего не найдено."
+
+#~ msgid "Image"
+#~ msgstr "Изображение"
+
+#~ msgid "View all posts in %s"
+#~ msgstr "Просмотреть все сообщения %s"
+
+#~ msgid "Executor Profile"
+#~ msgstr "Профиль автора"
+
+#~ msgid "Read more"
+#~ msgstr "Читать далее"
+
+#~ msgid "Page %s"
+#~ msgstr "Страница %s"
+
+#~ msgid "To add this"
+#~ msgstr "Добавить этот"
+
+#~ msgid "Archive for:"
+#~ msgstr "Архив для:"
+
+#~ msgid "Search Results for:"
+#~ msgstr "Результаты поиска для:"
+
+#~ msgid "</a><span class=\"wp-caption-text\">"
+#~ msgstr "</a><span class=\"wp-caption-text\">"
+
+#~ msgid "</span>"
+#~ msgstr "</span>"
