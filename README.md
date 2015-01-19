@@ -1,7 +1,7 @@
 <a href="http://bestwebsoft.com/products/templastic/" target=_blank> Templastic WordPress Theme</a>
 -------------------------------------
 
-Templastic is a clean and minimalistic theme that can be customized within seconds. Although seemingly strict, this theme will introduce your content in the most elegant manner. 
+Templastic is a fully responsive theme, which means it will be displayed perfectly on the screens of all sizes. This way, people can access your website using any device possible - be it a PC, a smartphone, or a tablet. Templastic is a fresh minimalistic theme with a clean and simplistic, and yet highly elegant design. It will be a killer option for a business website or WordPress blog.  Although Templastic is well-rounded as such, there is always room for some more functionality improvement. Therefore, we made this theme perfectly compatible with our products, so that you will not have to struggle with any conflicts between the theme and the plugins.
 
 <img src="http://bestwebsoft.com/wp-content/uploads/2015/01/xtemplastic-wp-banner.jpg.pagespeed.ic.3mH2CXUf00.jpg" />
 
